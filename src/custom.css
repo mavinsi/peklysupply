@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.font-title{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.div-grad {
+background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Marquee styles */
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+
+.font-text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+
+  background-color: transparent;
+}
+
+
+/* Track */
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #13293d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #13293d;
+}
+
+.scroll {
+  width: 60px;
+  position: absolute;
+
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+}
+
+.scroll::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+}
+
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translateY(15px);
+  }
+
+  40% {
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translateY(15px);
+  }
+
+  40% {
+    transform: translate(0);
+  }
+}
+
+
+video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70%;
+  width: 100vw;
+}
+.video-wrapper {
+
+
+  position: relative;
+  overflow: hidden;
+
+
+}
+.text-cliente{
+  color:#ea6d18;
+}
+.text-azul-cliente{
+  color: #a4d5db;
+}
+.bg-azul-cliente{
+  background-color: #a4d5db;
+}
+.bg-cliente{
+  background-color: #ea6d18;;
+}
+:root {
+  --random-rotate-x: calc(5deg + 10 * (random() - 0.5) * 2); /* Gira entre -5 e 15 graus */
+  --random-rotate-y: calc(10deg + 20 * (random() - 0.5) * 2); /* Gira entre -10 e 30 graus */
+  --random-scale: calc(1 + (random() - 0.5) * 0.2); /* Escala entre 0.9 e 1.1 */
+  --random-translate: calc(15px + (random() - 0.5) * 10px); /* Movimenta entre 10px e 20px */
+  --random-delay: calc((random() * 2)s); /* Delay aleatório entre 0 e 2 segundos */
+}
+
+/* Defina a classe especial apenas para as imagens que deseja animar */
+.animated-img {
+  animation: floating 5s ease-in-out infinite;
+  animation-delay: var(--random-delay); /* Atraso aleatório */
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+.floating-slow {
+  animation-name: floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px) rotateX(var(--random-rotate-x)) rotateY(var(--random-rotate-y)) scale(1);
+  }
+
+  25% {
+    transform: translate(0, var(--random-translate)) rotateX(calc(var(--random-rotate-x) * 1.5)) rotateY(calc(var(--random-rotate-y) * 1.5)) scale(var(--random-scale));
+  }
+
+  50% {
+    transform: translate(0, calc(var(--random-translate) * 1.5)) rotateX(calc(var(--random-rotate-x) * 2)) rotateY(calc(var(--random-rotate-y) * 2)) scale(calc(var(--random-scale) * 1.05));
+  }
+
+  75% {
+    transform: translate(0, var(--random-translate)) rotateX(calc(var(--random-rotate-x) * 1.5)) rotateY(calc(var(--random-rotate-y) * 1.5)) scale(var(--random-scale));
+  }
+
+  100% {
+    transform: translate(0, 0px) rotateX(var(--random-rotate-x)) rotateY(var(--random-rotate-y)) scale(1);
+  }
+}
+
+/* Marquee styles */
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
