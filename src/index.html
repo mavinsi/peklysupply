@@ -109,7 +109,8 @@
     
             // Atualiza índice do idioma
             idiomaIndex = (idiomaIndex + 1) % idiomas.length;
-    
+       console.log(idiomaIndex)
+       console.log(idiomas[idiomaIndex])
             // Atualiza a bandeira
             let imgElement = document.getElementById("btnLinguagem");
             imgElement.src = bandeiras[idiomaIndex];
@@ -185,12 +186,13 @@
             </div>
         </div>
     </nav>
-    <section class="relative z-0 bg-gray-50">
-        <!-- Background Video -->
-        <video autoplay loop muted playsinline class="absolute inset-0 object-cover w-full h-full z-[-1]">
-            <source src="./imgs/banner.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <aside class="relative overflow-hidden">
+      <video class="absolute inset-0 object-cover w-full h-full" autoplay playsinline muted loop>
+          <source src="./imgs/banner.mp4" type="video/mp4">
+          Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <section class="relative
+         bg-neutral-900/80  ">
         <!-- Overlay to darken the video -->
         <div class="absolute inset-0 bg-neutral-900 opacity-70 z-[-1]"></div>
 
@@ -210,6 +212,9 @@
             </p>
         </div>
     </section>
+
+    </aside>
+    
     <section class=" py-16 px-6">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
           
